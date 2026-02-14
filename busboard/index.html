@@ -1,0 +1,179 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 13.0px 'Helvetica Neue'; min-height: 15.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Live Bus Times&lt;/title&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: #0b0f14;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: #ffffff;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.title {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 44px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 700;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 6px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.subtitle {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.8;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-bottom: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex-wrap: wrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pill {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,0.12);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.95;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.row {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 18px 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-top: 1px solid rgba(255,255,255,0.10);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>align-items: center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>gap: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.bus {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 48px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 120px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 0 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dest {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 30px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 1 1 auto;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-overflow: ellipsis;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.eta {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 34px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-weight: 800;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: 140px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>flex: 0 0 auto;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.small {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 16px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>opacity: 0.6;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin-top: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="title" id="stopName"&gt;Live Bus Times&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="subtitle"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span id="stopMeta"&gt;Stop B — Enfield Lock Station&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="pill" id="statusPill"&gt;Loading…&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div id="list"&gt;&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="small"&gt;Auto refresh every 20 seconds&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>// ✅ Your stop point (from your TfL response)</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const STOP_ID = "490001100B"; // Enfield Lock Station, Platform/Stop B</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const REFRESH_MS = 20000;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function mins(seconds) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const m = Math.round((seconds || 0) / 60);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (m &lt;= 0) return "Due";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>return m + " min";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function setStatus(text) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>document.getElementById("statusPill").textContent = text;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>async function loadBus() {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const list = document.getElementById("list");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">      </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Updating…");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Use AllOrigins as a simple CORS helper for browser signage</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tflUrl = `https://api.tfl.gov.uk/StopPoint/${STOP_ID}/Arrivals`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const url = `https://api.allorigins.win/raw?url=${encodeURIComponent(tflUrl)}`;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const res = await fetch(url, { cache: "no-store" });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!res.ok) throw new Error("HTTP " + res.status);</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const data = await res.json();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>data.sort((a, b) =&gt; (a.timeToStation || 0) - (b.timeToStation || 0));</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Update header from live data (if present)</p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (data[0]) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const station = data[0].stationName || "Live Bus Times";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>const plat = data[0].platformName ? `Stop / Platform ${data[0].platformName}` : "";</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById("stopName").textContent = station;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>document.getElementById("stopMeta").textContent = plat ? plat : "Live arrivals";</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>if (!data.length) {</p>
+<p class="p1"><span class="Apple-converted-space">          </span>list.innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">            </span>`&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="dest"&gt;No buses currently&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="eta"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>setStatus("No data");</p>
+<p class="p1"><span class="Apple-converted-space">          </span>return;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>// Show the next 6</p>
+<p class="p1"><span class="Apple-converted-space">        </span>list.innerHTML = data.slice(0, 6).map(bus =&gt; `</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bus"&gt;${bus.lineName || ""}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="dest"&gt;${bus.destinationName || bus.towards || ""}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="eta"&gt;${mins(bus.timeToStation)}&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>`).join("");</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const now = new Date();</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Updated " + now.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }));</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>list.innerHTML =</p>
+<p class="p1"><span class="Apple-converted-space">          </span>`&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="dest"&gt;Error loading bus times&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="eta"&gt;—&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;/div&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>setStatus("Offline");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>loadBus();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>setInterval(loadBus, REFRESH_MS);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
